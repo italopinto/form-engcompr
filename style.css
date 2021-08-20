@@ -1,0 +1,97 @@
+*{
+	--fundobranco: #F3F1F4;
+	--header: #642373;
+	--form: #F3D0F4;
+	--letraform: #000000; 
+	--botaenviar: #CA537C;
+	--letraenviar: #FFFFFF; 
+}
+html{
+	font-size: 62.5%;
+	background-color: var(--fundobranco);
+}
+:root{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins';
+	text-decoration: none;
+}
+body{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin-left: 4.4rem;
+	margin-right: 8.1rem;
+}
+header img{
+	width: 50rem;
+	height: 50rem;
+	margin-right: 10.8rem;
+}
+header h1{
+	font-size: 3.6rem;
+	font-weight: 700;
+	text-align: center;
+	color: var(--header);
+	width: min(100%,56.8rem);
+	margin-right: 10.8rem;
+}
+.formpink{
+	background-color: var(--form);
+	border-radius: 0.8rem;
+	margin-top: 4rem;
+	width: 56.3rem;
+	height: 59.5rem;
+	box-shadow:0px 0px 70px 1px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.gridform{
+	display: flex;
+	height: 43.8rem;
+	width: 100%;
+}
+.gridform input[type=text]{
+	width: 26.345rem;
+	height: 2.946rem;
+	border-radius: 0.8rem;
+	outline: none;
+	border: 0px solid;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	
+}
+.textinputs{
+ 	margin: 3rem 1.731rem 14.3rem 1.5rem;
+	height: 42.2rem;
+}
+.textinputs label p{
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-top: 0.9rem;
+	margin-bottom: 0.9rem;
+}
+.divisor{
+	width: 0;
+	height: 43.8rem;
+	border-radius: 0.8rem;
+	border: 0.1rem solid var(--header);
+	margin-top: 3.1rem;
+}
+.radios{
+	padding-left: 1.2rem;
+	margin-top: 3.1rem;
+}
+button[type=submit]{
+	font-family: 'Poppins';
+	font-size: 1.6rem;
+	font-weight: 700;
+	border-radius: 0.8rem;
+	border: 0px solid;
+	background-color: var(--botaenviar);
+	color:var(--letraenviar);
+	width: 17.6rem;
+	height: 5.6rem;
+	margin-top: 6.2rem;
+}
