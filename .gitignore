@@ -1,0 +1,7 @@
+# node packages
+**/node_modules/**
+package-lock.json
+
+# secrets from development environment
+src/config/client_key.json
+.env
