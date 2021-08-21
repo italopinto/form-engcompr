@@ -1,4 +1,5 @@
 const googleSheet = require("../utils/spreadsheet");
+const timestamp = require("../utils/time");
 
 module.exports = {
   async addSub(req, res) {
@@ -18,7 +19,7 @@ module.exports = {
           paycheck,
         } = req.body;
         const row = {
-          DATA: new Date(),
+          DATA: await timestamp(),
           NOME: name,
           "DATA DE NASCIMENTO": birthdate,
           EMAIL: email,
