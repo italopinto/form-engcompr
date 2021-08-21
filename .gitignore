@@ -1,3 +1,7 @@
+# Vscode stuffs
+.vscode
+
+
 # node packages
 **/node_modules/**
 package-lock.json
