@@ -13,38 +13,41 @@
 		<img src="https://svgshare.com/i/_Nc.svg" alt="">
 	</header>
 	<main>
-		<form class = "formpink" action="">
+		<form for = "submit" id = "form" class = "formpink" action="">
 		<div class = "gridform">
 			<div class = "textinputs">
 				<label for=""><p><i class="fas fa-signature"></i>&nbsp; Nome Completo</p></label>
-			<input type="text" placeholder="Nome Completo" id = "name">
-			
+			<input title = "Digite somente letras"type="text" placeholder="Nome Completo" id = "name">
+			<p id = "nametitle" class = "titles"></p>	
 			<label for=""><p><i class="fas fa-phone-alt"></i>&nbsp; Número de Telefone</p></label>
-			<input type="text" placeholder="Número de Telefone" id = "phone">
-			
+			<input title = "Digite um número de telefone válido" type="text" placeholder="Número de Telefone" id = "phone">
+			<p id = "phonetitle" class = "titles"></p>	
 			<label for=""><p><i class="fas fa-birthday-cake"></i>&nbsp; Data de Nascimento</p></label>
 			
-			<input type="date" placeholder="data de Nascimento" id = "birthdate">
-			
+			<input type="date" required placeholder="data de Nascimento" id = "birthdate">
+			<p id = "birthtitle"></p>	
 			<label for=""><p><i class="fas fa-at"></i>&nbsp; E-mail</p></label>
 			
-			<input type="text" placeholder="E-mail" id = "email">
-			
+			<input title = "Digite um formato válido de E-mail" type="text" placeholder="E-mail" id = "email">
+			<p id = "emailtitle" class = "titles"></p>
+
 			<label for=""><p><i class="fas fa-city"></i>&nbsp; Cidade e Estado</p></label>
 			
-			<input type="text" placeholder="Cidade e Estado" id = "city">
-			
+			<input title = "Digite Sua cidade/estado" type="text" placeholder="Cidade e Estado" id = "city">
+			<p id = "citytitle" class = "titles"></p>	
 			<label for=""><p><i class="fas fa-university"></i>&nbsp; Faculdade/Escola</p></label>
 			
-			<input type="text" placeholder="Faculdade/Escola" id = "college">
+			<input title = "Digite somente letras" type="text" placeholder="Faculdade/Escola" id = "college">
+			<p id = "collegetitle" class = "titles"></p>
 			</div>
 
 			<div class = "divisor"></div>
 
-		<div class = "radios">	
+		<div title = "Escolha uma opção" class = "radios">	
 
 		<div class = "radios1">
 		<p><i class="fas fa-graduation-cap"></i>&nbsp; Formação Acadêmica</p>		
+		<p class ="titles" id = "radios1title"></p>
 		<span>
 		<input type="radio" name ="knowing" id ="FC">
 		<label for="FC">Ensino Fundamental Completo</label>
@@ -77,6 +80,7 @@
 
 		<div class = "radios2">
 		<p><i class="fas fa-network-wired"></i>&nbsp;Como ficou sabendo do curso?</p>		
+		<p class ="titles" id = "radios2title"></p>
 		<span>
 		<input type="radio" name = "radio2" id = "ig">
 		<label for="ig">Instagram</label>
@@ -108,9 +112,9 @@
 		</div>
 		</div>
 		</div>
-			<button type="submit">Enviar</button>
+			<button type="submit" id = "paycheck">Enviar</button>
 		</form>
 	</main>
-	<script src = ""></script>
+	<script src = "app.js"></script>
 </body>
 </html>
