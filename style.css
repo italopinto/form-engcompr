@@ -25,6 +25,35 @@ body{
 	margin: 0;
 }
 
+main {
+	display: flex;
+	align-items: center;
+}
+
+button {
+	font-family: 'Poppins';
+	font-size: 1.6rem;
+	font-weight: 700;
+	border-radius: 0.8rem;
+	border: 0px solid;
+	background-color: var(--botaenviar);
+	color:var(--letraenviar);
+	width: 60%;
+	height: 4.5rem;
+	box-shadow: 0px 0px 10px 5px rgba(202, 83, 124, 0.25);
+	transition: 0.5s;
+}
+
+input[type="radio"] {
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+button:hover{
+	cursor: pointer;
+	filter: brightness(1.2);
+}
+
 .container {
 	height: 100%;
 	padding: 2%;
@@ -92,6 +121,9 @@ header h1{
 
 .response-to-user {
 	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 	background-color: var(--form);
 	box-shadow:0px 0px 70px 1px rgba(0, 0, 0, 0.25);
 	border-radius: 0.8rem;
@@ -100,6 +132,18 @@ header h1{
 	max-width: 685px;
 	box-sizing: border-box;
 	padding: 15px 2%;
+}
+
+.response-to-user h1{
+	margin-bottom: 4px;
+}
+.response-to-user h1, .response-to-user h2 {
+	margin-top: 0;
+}
+
+.response-to-user i {
+	margin-bottom: 10px;
+	font-size: 3rem;
 }
 
 .payment-radios {
@@ -272,7 +316,7 @@ input[type=date]{
 		width: 80%;
 		max-width: 345px;
 	}
-	.formpink, .formpink-payment {
+	.formpink, .formpink-payment, .response-to-user {
 		margin: 0 auto;
 	}
 }
@@ -281,7 +325,7 @@ input[type=date]{
 	.container {	
 		padding: 3% 4%;
 	}
-	.formpink, .formpink-payment {
+	.formpink, .formpink-payment, .response-to-user {
 		min-width: unset;
 		max-width: unset;
 		height: unset;
@@ -316,6 +360,10 @@ input[type=date]{
 }
 
 @media screen and (max-width: 400px) {
+	buttom {
+		width: 80%;
+	}
+
 	header h1{
 		font-size: 2.4rem;
 	}

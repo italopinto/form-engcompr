@@ -1,7 +1,8 @@
 let form = document.getElementById("form");
 let formPayment = document.getElementById("formPayment");
 let modalResult = document.getElementById("response-to-user");
-let modalMessage = document.getElementById("message");
+let modalMessageTitle = document.getElementById("modalTitle");
+let modalMessageSubTitle = document.getElementById("modalSubTitle");
 let nome = document.getElementById("name");
 let phone = document.getElementById("phone");
 let birth = document.getElementById("birthdate");
@@ -107,12 +108,13 @@ async function postDataForm() {
 			body: JSON.stringify(body),
 			headers: {"Content-type": "application/json; charset=UTF-8"}
 		})
-		modalResult.innerText = "Sucesso"
+		modalMessageTitle.innerHTML = "A equipe da Brainstorm agradece sua inscrição!"
+		modalMessageSubTitle.innerHTML = "Aguarde nosso contato para mais informações"
 		console.log('response', response);
 		hideSpinner();
 	} catch (error) {
 		hideSpinner();
-		modalResult.innerText = "Opa!, algo deu errado"
+		modalMessageTitle.innerHTML = "Opa!, algo deu errado"
 		console.log('Erro:', error)
 	}
 	callModalResult();
@@ -158,6 +160,7 @@ function savePersonalData() {
 }
 
 function callPaymetnForm() {
+	form.classList.remove("show");
 	form.classList.add("hide");
 	formPayment.classList.add("show");
 }
@@ -169,6 +172,7 @@ function callModalResult() {
 }
 
 function backTobegin() {
+	clearInputs()
 	modalResult.classList.remove("show");
 	modalResult.classList.add("hide");
 	form.classList.add("show")
@@ -180,4 +184,24 @@ function showSpinner() {
 
 function hideSpinner() {
   loadingDiv.style.visibility = 'hidden';
+}
+
+function clearInputs() {
+	nome.value = ""
+	phone.value = ""
+	birth.value = ""
+	email.value = ""
+	city.value = ""
+	college.value = ""
+	modalMessageTitle = ""
+	modalMessageSubTitle = ""
+	clearRadioButtons(radios1)
+	clearRadioButtons(radios2)
+	clearRadioButtons(paymentRadios)
+}
+
+function clearRadioButtons(radioArray){
+	for (let i = 0; i < radioArray.length; i++) {
+		radioArray[i].checked = false;
+	}
 }
