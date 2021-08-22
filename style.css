@@ -61,7 +61,6 @@ header h1{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
 }
 .titles{
 	margin-top: 0;
@@ -73,6 +72,7 @@ header h1{
 	display: flex;
 	height: 100%;
 	width: 100%;
+	position: relative;
 }
 .gridform input[type=text]{
 	width: 26.345rem;
@@ -129,6 +129,7 @@ button[type=submit]{
 	transform: translateX(-50%);
 }
 button[type=submit]:hover{
+	cursor: pointer;
 	filter: brightness(1.2);
 }
 input[type=date]{
@@ -210,6 +211,76 @@ input[type=date]{
 	header .box-img{
 		width: 80%;
 		max-width: 345px;
+	}
+	.formpink {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 645px) {
+	.container {	
+		padding: 3% 4%;
+	}
+	.formpink {
+		min-width: unset;
+		max-width: unset;
+		height: unset;
+	}
+
+	.gridform {
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0;
+	}
+
+	.container-textinputs {
+		width: 95%;
+	}
+
+	.textinputs {
+		width: 100%;
+	}
+	.textinputs input {
+		width: 95% !important;
+	}
+
+	.divisor {
+		display: none;
+	}
+	button[type=submit]{
+		width: 70%;
+		position: unset;
+    transform: unset;
+    margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	header h1{
+		font-size: 2.4rem;
+	}
+	.textinputs {
+		width: 100%;
+	}
+	.textinputs input {
+		width: 95% !important;
+	}
+
+	.radios {
+		padding: 15px 0;
+	}
+
+	.radios1, .radios2 {
+		height: unset;
+		margin-top: unset;
+	}
+
+	.radios2 {
+		margin-top: 2rem;
+	}
+
+	.radios1 p, .radios2 p {
+		width: 100% !important;
 	}
 }
 
