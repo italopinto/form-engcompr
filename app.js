@@ -1,5 +1,7 @@
 let form = document.getElementById("form");
 let formPayment = document.getElementById("formPayment");
+let modalResult = document.getElementById("response-to-user");
+let modalMessage = document.getElementById("message");
 let nome = document.getElementById("name");
 let phone = document.getElementById("phone");
 let birth = document.getElementById("birthdate");
@@ -99,15 +101,21 @@ async function postDataForm() {
 	const url = 'https://formengcomprapi.azurewebsites.net/v1/subs';
 	console.log('body', body)
 	showSpinner();
-	const response = await fetch(url, {
-		method: "POST",
-		body: JSON.stringify(body),
-		headers: {"Content-type": "application/json; charset=UTF-8"}
-	})
-	console.log('response', response);
-	hideSpinner();
-	console.log('terminou')
-	
+	try {
+		const response = await fetch(url, {
+			method: "POST",
+			body: JSON.stringify(body),
+			headers: {"Content-type": "application/json; charset=UTF-8"}
+		})
+		modalResult.innerText = "Sucesso"
+		console.log('response', response);
+		hideSpinner();
+	} catch (error) {
+		hideSpinner();
+		modalResult.innerText = "Opa!, algo deu errado"
+		console.log('Erro:', error)
+	}
+	callModalResult();
 }
 
 function savePayment() {
@@ -152,6 +160,18 @@ function savePersonalData() {
 function callPaymetnForm() {
 	form.classList.add("hide");
 	formPayment.classList.add("show");
+}
+
+function callModalResult() {
+	formPayment.classList.remove("show");
+	formPayment.classList.add("hide");
+	modalResult.classList.add("show")
+}
+
+function backTobegin() {
+	modalResult.classList.remove("show");
+	modalResult.classList.add("hide");
+	form.classList.add("show")
 }
 
 function showSpinner() {
