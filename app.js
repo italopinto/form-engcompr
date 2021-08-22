@@ -45,6 +45,15 @@ form.addEventListener("submit", function(stop){
 		document.getElementById("emailtitle").innerText = ""
 	}
 
+	if(/[A-Z]{2}\/\D{3}/.test(city.value) == false){
+		error += 1
+		document.getElementById("citytitle").innerText = city.title;
+	}
+	else{
+		error = 0;
+		document.getElementById("citytitle").innerText = ""
+	}
+
 	if(/[^0-9][a-z][^0-9]/ig.test(college.value) == false){
 		error += 1;
 		document.getElementById("collegetitle").innerText = college.title;
