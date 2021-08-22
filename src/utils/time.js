@@ -1,4 +1,13 @@
 /**
+ * @param {Number} x to add a zero in the front
+ * @description
+ * to ensure the format XX when x < 10
+ *  */
+function digit(x) {
+  return x < 10 ? 0 : "";
+}
+
+/**
  *
  * @description
  * returns a timestamp string formatted
@@ -13,9 +22,8 @@ async function timestamp() {
   const h = date.getHours();
   const m = date.getMinutes();
   const s = date.getSeconds();
-  const digit = M < 10 ? 0 : ""; // to ensure the format XX in month
-
-  return `${D}/${digit}${M}/${Y} - ${h}:${m}:${s}`;
+  // prettier-ignore
+  return `${digit(D)}${D}/${digit(M)}${M}/${Y} - ${digit(h)}${h}:${digit(m)}${m}:${digit(s)}${s}`;
 }
 
 module.exports = timestamp;
