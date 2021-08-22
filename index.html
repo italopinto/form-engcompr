@@ -7,6 +7,7 @@
 	<script src="https://kit.fontawesome.com/68c6bccf2e.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="loadingAnimation.css">
 </head>
 <body>
 	<div class="container">
@@ -109,11 +110,35 @@
 							</span>
 						</div>
 					</div>
-					<button type="submit" id ="paycheck" class="submit">Enviar</button>
+					<button type="submit" id ="paycheck" class="proximo">Próximo</button>
+				</div>
+			</form>
+			<form for = "submit" id = "formPayment" class = "formpink-payment hide" action="">
+				<div title="Escolha uma opção" class="payment-radios">	
+					<div class = "payment-box">
+						<p><i class="fas fa-graduation-cap"></i>&nbsp; Forma de Pagamento</p>		
+						<p class ="titles" id = "paymentRadioTitle"></p>
+						<span>
+						<input type="radio" value="Boleto bancário" name ="payment" id ="FC">
+						<label for="FC">Boleto bancário</label>
+						</span>
+						<span>
+						<input type="radio" value="Transferência bancária: Banco 237, Agência 3728, Conta Corrente 13319-1" name ="payment" id = "FI">
+						<label for="FI">Transferência bancária: Banco 237, Agência 3728, Conta Corrente 13319-1 </label>
+						</span>
+						<span>
+						<input type="radio" value="PIX: brainstorm.eng.jr@gmail.com" name ="payment" id = "MC">
+						<label for="MC">PIX: brainstorm.eng.jr@gmail.com</label>
+						</span>
+					</div>
+					<button type="submit" id ="paycheck" class="enviar">Enviar</button>
 				</div>
 			</form>
 		</main>
 	</div>
+	<div id="loading" class="loading">
+    &#8230;     
+  </div>
 	<script src = "app.js"></script>
 </body>
 </html>
