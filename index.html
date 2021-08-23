@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Curso Básico de Programação</title>
 	<script src="https://kit.fontawesome.com/68c6bccf2e.js" crossorigin="anonymous"></script>
@@ -9,129 +10,151 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="loadingAnimation.css">
 </head>
+
 <body>
 	<div class="container">
-		<header><h1>Curso Básico de Programação Brainstorm Engenharia</h1>
+		<header>
+			<h1>Curso Básico de Programação Brainstorm Engenharia</h1>
 			<div class="box-img">
 				<img src="https://svgshare.com/i/_Nc.svg" alt="">
 			</div>
 		</header>
 		<main>
-			<form for = "submit" id = "form" class = "formpink" action="">
-				<div class = "gridform">
+			<form for="submit" id="form" class="formpink" action="">
+				<div class="gridform">
 					<div class="container-textinputs">
-						<div class = "textinputs">
-							<label for=""><p><i class="fas fa-signature"></i>&nbsp; Nome Completo</p></label>
-							<input required title = "Digite somente letras"type="text" placeholder="Nome Completo" id = "name">
-							<p id = "nametitle" class = "titles"></p>	
-							<label for=""><p><i class="fas fa-phone-alt"></i>&nbsp; Número de Telefone</p></label>
-							<input required title = "Digite no formato: 91987436543" type="text" placeholder="Número de Telefone" id = "phone">
-							<p id = "phonetitle" class = "titles"></p>	
-							<label for=""><p><i class="fas fa-birthday-cake"></i>&nbsp; Data de Nascimento</p></label>
-							<input required type="date" required placeholder="data de Nascimento" id = "birthdate">
-							<p id = "birthtitle"></p>	
-							<label for=""><p><i class="fas fa-at"></i>&nbsp; E-mail</p></label>
-							<input required title = "Digite um formato válido de E-mail" type="text" placeholder="E-mail" id = "email">
-							<p id = "emailtitle" class = "titles"></p>
-							<label for=""><p><i class="fas fa-city"></i>&nbsp; Cidade e Estado</p></label>
-							<input required title = "Digite no formato: 'UF/cidade'" type="text" placeholder="Cidade e Estado" id = "city">
-							<p id = "citytitle" class = "titles"></p>	
-							<label for=""><p><i class="fas fa-university"></i>&nbsp; Faculdade/Escola</p></label>
-							<input required title = "Digite somente letras" type="text" placeholder="Faculdade/Escola" id = "college">
-							<p id = "collegetitle" class = "titles"></p>
+						<div class="textinputs">
+							<label for="">
+								<p><i class="fas fa-signature"></i>&nbsp; Nome Completo</p>
+							</label>
+							<input required title="Digite somente letras" type="text" placeholder="Nome Completo"
+								id="name">
+							<p id="nametitle" class="titles"></p>
+							<label for="">
+								<p><i class="fas fa-phone-alt"></i>&nbsp; Número de Telefone</p>
+							</label>
+							<input required title="Digite no formato: 91987436543" type="text"
+								placeholder="Número de Telefone" id="phone">
+							<p id="phonetitle" class="titles"></p>
+							<label for="">
+								<p><i class="fas fa-birthday-cake"></i>&nbsp; Data de Nascimento</p>
+							</label>
+							<input required type="date" required placeholder="data de Nascimento" id="birthdate">
+							<p id="birthtitle"></p>
+							<label for="">
+								<p><i class="fas fa-at"></i>&nbsp; E-mail</p>
+							</label>
+							<input required title="Digite um formato válido de E-mail" type="text" placeholder="E-mail"
+								id="email">
+							<p id="emailtitle" class="titles"></p>
+							<label for="">
+								<p><i class="fas fa-city"></i>&nbsp; Cidade e Estado</p>
+							</label>
+							<input required title="Digite no formato: 'UF/cidade'" type="text"
+								placeholder="Cidade e Estado" id="city">
+							<p id="citytitle" class="titles"></p>
+							<label for="">
+								<p><i class="fas fa-university"></i>&nbsp; Faculdade/Escola</p>
+							</label>
+							<input required title="Digite somente letras" type="text" placeholder="Faculdade/Escola"
+								id="college">
+							<p id="collegetitle" class="titles"></p>
 						</div>
 					</div>
-	
-					<div class = "divisor"></div>
-					<div title = "Escolha uma opção" class = "radios">	
-						<div class = "radios1">
-							<p><i class="fas fa-graduation-cap"></i>&nbsp; Formação Acadêmica</p>		
-							<p class ="titles" id = "radios1title"></p>
+
+					<div class="divisor"></div>
+					<div title="Escolha uma opção" class="radios">
+						<div class="radios1">
+							<p><i class="fas fa-graduation-cap"></i>&nbsp; Formação Acadêmica</p>
+							<p class="titles" id="radios1title"></p>
 							<span>
-							<input type="radio" value="Fundamental Completo" name ="knowing" id ="FC">
-							<label for="FC">Fundamental Completo</label>
+								<input type="radio" value="Fundamental Completo" name="knowing" id="FC">
+								<label for="FC">Fundamental Completo</label>
 							</span>
 							<span>
-							<input type="radio" value="Fundamental Incompleto" name ="knowing" id = "FI">
-							<label for="FI">Fundamental Incompleto</label>
+								<input type="radio" value="Fundamental Incompleto" name="knowing" id="FI">
+								<label for="FI">Fundamental Incompleto</label>
 							</span>
 							<span>
-							<input type="radio" value="Médio Completo" name ="knowing" id = "MC">
-							<label for="MC">Médio Completo</label>
+								<input type="radio" value="Médio Completo" name="knowing" id="MC">
+								<label for="MC">Médio Completo</label>
 							</span>
 							<span>
-							<input type="radio" value="Médio Incompleto" name ="knowing" id = "MI">
-							<label for="MI">Médio Incompleto</label>
+								<input type="radio" value="Médio Incompleto" name="knowing" id="MI">
+								<label for="MI">Médio Incompleto</label>
 							</span>
 							<span>
-							<input type="radio" value="Superior Completo" name ="knowing" id = "SC">
-							<label for="SC">Superior Completo</label>
+								<input type="radio" value="Superior Completo" name="knowing" id="SC">
+								<label for="SC">Superior Completo</label>
 							</span>
 							<span>
-							<input type="radio" value="Superior Incompleto" name ="knowing" id = "SI">
-							<label for="SI">Superior Incompleto</label>
+								<input type="radio" value="Superior Incompleto" name="knowing" id="SI">
+								<label for="SI">Superior Incompleto</label>
 							</span>
 							<span>
-							<input type="radio" value="Outro" name ="knowing" id = "outro">
-							<label for="outro">Outro</label>
+								<input type="radio" value="Outro" name="knowing" id="outro">
+								<label for="outro">Outro</label>
 							</span>
 						</div>
-	
-						<div class = "radios2">
-							<p><i class="fas fa-network-wired"></i>&nbsp;Como ficou sabendo do curso?</p>		
-							<p class ="titles" id = "radios2title"></p>
+
+						<div class="radios2">
+							<p><i class="fas fa-network-wired"></i>&nbsp;Como ficou sabendo do curso?</p>
+							<p class="titles" id="radios2title"></p>
 							<span>
-							<input type="radio" value="Instagram" name = "radio2" id = "ig">
-							<label for="ig">Instagram</label>
+								<input type="radio" value="Instagram" name="radio2" id="ig">
+								<label for="ig">Instagram</label>
 							</span>
 							<span>
-							<input type="radio" value="Facebook" name = "radio2" id = "fc">
-							<label for="fc">Facebook</label>
+								<input type="radio" value="Facebook" name="radio2" id="fc">
+								<label for="fc">Facebook</label>
 							</span>
 							<span>
-							<input type="radio" value="Twitter" name = "radio2" id = "tt">
-							<label for = "tt">Twitter</label>
+								<input type="radio" value="Twitter" name="radio2" id="tt">
+								<label for="tt">Twitter</label>
 							</span>
 							<span>
-							<input type="radio" value="Linkedin" name = "radio2" id = "lk">
-							<label for="lk">Linkedin</label>
+								<input type="radio" value="Linkedin" name="radio2" id="lk">
+								<label for="lk">Linkedin</label>
 							</span>
 							<span>
-							<input type="radio" value="Site da Brainstorm Engenharia" name = "radio2" id ="BS">
-							<label for="BS">Site da Brainstorm Engenharia</label>
+								<input type="radio" value="Site da Brainstorm Engenharia" name="radio2" id="BS">
+								<label for="BS">Site da Brainstorm Engenharia</label>
 							</span>
 							<span>
-							<input type="radio" value="Indicação de amigo" name = "radio2" id = "friend">
-							<label for="friend">Indicação de amigo</label>
+								<input type="radio" value="Indicação de amigo" name="radio2" id="friend">
+								<label for="friend">Indicação de amigo</label>
 							</span>
 							<span>
-							<input type="radio" value="Outro" name = "radio2" id = "other">
-							<label for="other">Outro</label>
+								<input type="radio" value="Outro" name="radio2" id="other">
+								<label for="other">Outro</label>
 							</span>
 						</div>
 					</div>
-					<button type="submit" id ="paycheck" class="proximo">Próximo</button>
+					<button type="submit" id="paycheck" class="proximo">Próximo</button>
 				</div>
 			</form>
-			<form for = "submit" id = "formPayment" class = "formpink-payment hide" action="">
-				<div title="Escolha uma opção" class="payment-radios">	
-					<div class = "payment-box">
-						<p><i class="fas fa-graduation-cap"></i>&nbsp; Forma de Pagamento</p>		
-						<p class ="titles" id = "paymentRadioTitle"></p>
+			<form for="submit" id="formPayment" class="formpink-payment hide" action="">
+				<div title="Escolha uma opção" class="payment-radios">
+					<div class="payment-box">
+						<p><i class="fas fa-graduation-cap"></i>&nbsp; Forma de Pagamento</p>
+						<p class="titles" id="paymentRadioTitle"></p>
 						<span>
-						<input type="radio" value="Boleto bancário" name ="payment" id ="FC">
-						<label for="FC">Boleto bancário</label>
+							<input type="radio" value="Boleto bancário" name="payment" id="FC">
+							<label for="FC">Boleto bancário</label>
 						</span>
 						<span>
-						<input type="radio" value="Transferência bancária: Banco 237, Agência 3728, Conta Corrente 13319-1" name ="payment" id = "FI">
-						<label for="FI">Transferência bancária: Banco 237, Agência 3728, Conta Corrente 13319-1 </label>
+							<input type="radio"
+								value="Transferência bancária: Banco 237, Agência 3728, Conta Corrente 13319-1"
+								name="payment" id="FI">
+							<label for="FI">Transferência bancária: Banco 237, Agência 3728, Conta Corrente 13319-1
+							</label>
 						</span>
 						<span>
-						<input type="radio" value="PIX: brainstorm.eng.jr@gmail.com" name ="payment" id = "MC">
-						<label for="MC">PIX: brainstorm.eng.jr@gmail.com</label>
+							<input type="radio" value="PIX: brainstorm.eng.jr@gmail.com" name="payment" id="MC">
+							<label for="MC">PIX: brainstorm.eng.jr@gmail.com</label>
 						</span>
 					</div>
-					<button type="submit" id ="paycheck" class="enviar">Enviar</button>
+					<button type="submit" id="paycheck" class="enviar">Enviar</button>
 				</div>
 			</form>
 			<div class="response-to-user" id="response-to-user">
@@ -143,8 +166,9 @@
 		</main>
 	</div>
 	<div id="loading" class="loading">
-    &#8230;     
-  </div>
-	<script src = "app.js"></script>
+		&#8230;
+	</div>
+	<script src="app.js"></script>
 </body>
+
 </html>
