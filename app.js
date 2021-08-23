@@ -14,6 +14,8 @@ let radios2 = document.getElementsByName("radio2");
 let paymentRadios = document.getElementsByName("payment");
 let loadingDiv = document.getElementById('loading');
 let body = {};
+let outroradio = document.getElementsByClassName("outro");
+let outroinput = document.getElementsByClassName("outroinput");
 
 form.addEventListener("submit", function(stop){
 	stop.preventDefault();
@@ -86,6 +88,24 @@ form.addEventListener("submit", function(stop){
 		callPaymetnForm()
 	}
 
+})
+outroinput[0].style.display = "none";
+form.addEventListener("change", function input0(){
+	console.log(outroradio[0].checked);
+	if (outroradio[0].checked === true){
+		outroinput[0].style.display = "flex";
+	}
+	if(outroradio[0].checked === false){
+		outroinput[0].style.display = "none";
+	}
+})
+form.addEventListener("change", function(){
+	if (outroradio[1].checked === true){
+		outroinput[1].style.display = "flex";
+	}
+	if (outroradio[1].checked === false){
+		outroinput[1].style.display = "none";
+	}
 })
 
 formPayment.addEventListener("submit", function(stop) {

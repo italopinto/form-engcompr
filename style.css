@@ -53,14 +53,19 @@ button:hover{
 	cursor: pointer;
 	filter: brightness(1.2);
 }
-
 .container {
 	height: 100%;
 	padding: 2%;
 	display: flex;
 	justify-content: space-evenly;
 }
-
+.outroinput{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	margin-left: 1rem; 
+	border-bottom:#000000 1px solid;
+}
 header {
 	padding: 10px;
 	display: flex;
@@ -169,7 +174,7 @@ header h1{
 	width: 100%;
 	position: relative;
 }
-.gridform input[type=text]{
+.gridform input[type=text]:not(.outroinput){
 	width: 26.345rem;
 	height: 2.946rem;
 	border-radius: 0.8rem;
