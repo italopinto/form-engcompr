@@ -4,8 +4,13 @@ const timestamp = require("../utils/time");
 module.exports = {
   async addSub(req, res) {
     try {
-      if (req.body.name === undefined) {
-        return res.status(204).json({ message: "Requisição sem dados" });
+      const dados = req.body;
+      if (dados.name === undefined) {
+        return res.status(406).json({
+          success: false,
+          message: "Requisição sem dados",
+          data: dados,
+        });
       } else {
         const {
           name,
@@ -34,13 +39,16 @@ module.exports = {
         await googleSheet.addRow(row);
 
         return res.status(201).json({
+          success: true,
           message: "Inscrição realizada com sucesso!",
           data: row,
         });
       }
     } catch (error) {
       console.log(error);
-      return res.status(500).json({ message: "Error :(", erro: error });
+      return res
+        .status(500)
+        .json({ success: false, message: "Erro no servidor" });
     }
   },
 };
