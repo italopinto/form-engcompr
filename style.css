@@ -1,8 +1,8 @@
 *{
-	--fundobranco: #F3F1F4;
+	--fundobranco: #fafafa;
 	--header: #642373;
 	--form: #F3D0F4;
-	--letraform: #000000; 
+	--letraform: #272525; 
 	--botaenviar: #CA537C;
 	--letraenviar: #FFFFFF; 
 }
@@ -40,7 +40,7 @@ button {
 	color:var(--letraenviar);
 	width: 60%;
 	height: 4.5rem;
-	box-shadow: 0px 0px 10px 5px rgba(202, 83, 124, 0.25);
+	box-shadow: 0px 4px 4px  rgba(202, 83, 124, 0.1);
 	transition: 0.5s;
 }
 
@@ -54,7 +54,7 @@ button:hover{
 	filter: brightness(1.2);
 }
 .container {
-	height: 100%;
+	height: 90vh;
 	padding: 2%;
 	display: flex;
 	justify-content: space-evenly;
@@ -67,6 +67,7 @@ button:hover{
 	border-bottom:#000000 1px solid;
 }
 header {
+	align-self: center;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
@@ -83,6 +84,7 @@ header .box-img{
 }
 
 header h1{
+	max-width: 650px ;
 	margin: 0;
 	font-size: 3.6rem;
 	font-weight: 700;
@@ -105,7 +107,7 @@ header h1{
 	min-width: 605px;
 	max-width: 685px;
 	height: 570px;
-	box-shadow:0px 0px 70px 1px rgba(0, 0, 0, 0.25);
+	box-shadow:4px 4px 4px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -130,7 +132,7 @@ header h1{
 	align-items: center;
 	justify-content: space-around;
 	background-color: var(--form);
-	box-shadow:0px 0px 70px 1px rgba(0, 0, 0, 0.25);
+	box-shadow:0px 4px 5px 1px rgba(0, 0, 0, 0.25);
 	border-radius: 0.8rem;
 	width: 100%;
 	min-width: 605px;
@@ -141,6 +143,10 @@ header h1{
 
 .response-to-user h1{
 	margin-bottom: 4px;
+	color: var(--header);
+}
+.response-to-user h2{
+	color: #141414;
 }
 .response-to-user h1, .response-to-user h2 {
 	margin-top: 0;
@@ -244,7 +250,7 @@ input[type=date]{
 	border-radius: 0.8rem;
 	outline: none;
 	border: 0px solid;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 	font-family: Poppins;
 	font-size: 1.3rem;
 	padding-left: 0.6rem;
