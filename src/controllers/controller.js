@@ -4,46 +4,37 @@ const timestamp = require("../utils/time");
 module.exports = {
   async addSub(req, res) {
     try {
-      const dados = req.body;
-      if (dados.name === undefined) {
-        return res.status(406).json({
-          success: false,
-          message: "Requisição sem dados",
-          data: dados,
-        });
-      } else {
-        const {
-          name,
-          birthdate,
-          email,
-          phone,
-          city,
-          degree,
-          college,
-          knowing,
-          paycheck,
-        } = req.body;
-        const row = {
-          DATA: await timestamp(),
-          NOME: name,
-          "DATA DE NASCIMENTO": birthdate,
-          EMAIL: email,
-          TELEFONE: phone,
-          "ESTADO/CIDADE": city,
-          "NÍVEL ESCOLARIDADE": degree,
-          "FACULDADE/COLÉGIO": college,
-          SABENDO: knowing,
-          PAGAMENTO: paycheck,
-        };
+      const {
+        name,
+        birthdate,
+        email,
+        phone,
+        city,
+        degree,
+        college,
+        knowing,
+        paycheck,
+      } = req.body;
+      const row = {
+        DATA: await timestamp(),
+        NOME: name,
+        "DATA DE NASCIMENTO": birthdate,
+        EMAIL: email,
+        TELEFONE: phone,
+        "ESTADO/CIDADE": city,
+        "NÍVEL ESCOLARIDADE": degree,
+        "FACULDADE/COLÉGIO": college,
+        SABENDO: knowing,
+        PAGAMENTO: paycheck,
+      };
 
-        await googleSheet.addRow(row);
+      await googleSheet.addRow(row);
 
-        return res.status(201).json({
-          success: true,
-          message: "Inscrição realizada com sucesso!",
-          data: row,
-        });
-      }
+      return res.status(201).json({
+        success: true,
+        message: "Inscrição realizada com sucesso!",
+        data: row,
+      });
     } catch (error) {
       console.log(error);
       return res
