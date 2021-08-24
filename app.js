@@ -91,7 +91,6 @@ form.addEventListener("submit", function(stop){
 })
 outroinput[0].style.display = "none";
 form.addEventListener("change", function input0(){
-	console.log(outroradio[0].checked);
 	if (outroradio[0].checked === true){
 		outroinput[0].style.display = "flex";
 	}
@@ -129,7 +128,7 @@ formPayment.addEventListener("submit", function(stop) {
 
 async function postDataForm() {
 	const url = 'https://formengcomprapi.azurewebsites.net/v1/subs';
-	console.log('body', body)
+	
 	showSpinner();
 	try {
 		const response = await fetch(url, {
@@ -151,7 +150,7 @@ async function postDataForm() {
 
 function savePayment() {
 	let paymentChecked;
-	console.log('paymentRadios', paymentRadios)
+	
 	for (var i = 0; i < paymentRadios.length; i++) {
 		if (paymentRadios[i].checked) {
 			paymentChecked = paymentRadios[i]
