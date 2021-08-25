@@ -16,7 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(multer().none());
 
 // ROUTES
-app.post("/v1/subs", controller.addSub);
+// prettier-ignore
+app
+  .get("/v1/awake", controller.awake)
+  .post("/v1/subs", controller.addSub);
 
 // SERVER
 app.listen(PORT, (req, res) => {
