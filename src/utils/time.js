@@ -11,7 +11,7 @@ function digit(x) {
  *
  * @description
  * returns a timestamp string formatted
- * from the Date() object JavaScript
+ * from the JavaScript Date() object
  */
 
 async function timestamp() {

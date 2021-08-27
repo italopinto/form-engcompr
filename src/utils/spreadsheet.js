@@ -1,8 +1,8 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const dotenv = require("dotenv");
 
-const creds = require("../config/client_key.json");
 dotenv.config();
+const creds = require(process.env.GOOGLE_KEY);
 
 module.exports = {
   async addRow(row) {
