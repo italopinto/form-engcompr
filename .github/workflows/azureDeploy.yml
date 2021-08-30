@@ -1,4 +1,11 @@
+name: Deploy Node.js to Azure Web App
+
 on: push
+
+env:
+  AZURE_WEBAPP_NAME: formEngcomprApi # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: "src/" # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: "14.17.3"
 
 jobs:
   build-and-deploy:
@@ -8,17 +15,17 @@ jobs:
       - name: "Checkout Github Action"
         uses: actions/checkout@master
 
-      - name: Setup Node 10.x
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: ${{ env.NODE_VERSION }}
       - name: "npm install"
         run: |
-          cd src/
           npm install
 
       - name: "Run Azure webapp deploy action using publish profile credentials"
         uses: azure/webapps-deploy@v2
         with:
-          app-name: formEngcomprApi
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
