@@ -6,6 +6,7 @@ let modalMessageSubTitle = document.getElementById("modalSubTitle");
 let nome = document.getElementById("name");
 let phone = document.getElementById("phone");
 let birth = document.getElementById("birthdate");
+let date = Date.parse(birth.value);
 let email = document.getElementById("email");
 let city = document.getElementById("city");
 let college = document.getElementById("college");
@@ -17,10 +18,12 @@ let body = {};
 let outroradio = document.getElementsByClassName("outro");
 let outroinput = document.getElementsByClassName("outroinput");
 
+console.log(city.value)
+
 form.addEventListener("submit", function(stop){
 	stop.preventDefault();
 	let error = 0;
-	if(/[^0-9][a-z][^0-9]/ig.test(nome.value) == false){
+	if(/[^0-9][a-z][^0-9]/ig.test(nome.value) == false || nome.value == undefined){
 		error += 1;
 		document.getElementById("nametitle").innerText = nome.title;
 	}
@@ -29,7 +32,7 @@ form.addEventListener("submit", function(stop){
 		document.getElementById("nametitle").innerText = '';
 	}
 
-	if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone.value) == false){
+	if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone.value) == false || phone.value == undefined){
 		error += 1;
 		document.getElementById("phonetitle").innerText = phone.title
 	}
@@ -37,8 +40,7 @@ form.addEventListener("submit", function(stop){
 		error = 0;
 		document.getElementById("phonetitle").innerText = ""
 	}
-
-	if(/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+).([a-z])?$/.test(email.value) == false){
+	if(/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+).([a-z])?$/.test(email.value) == false || email.value == undefined){
 		error += 1
 		document.getElementById("emailtitle").innerText = email.title;
 	}
@@ -46,8 +48,15 @@ form.addEventListener("submit", function(stop){
 		error = 0;
 		document.getElementById("emailtitle").innerText = ""
 	}
-
-	if(/[A-Z]{2}\/\D{3}/.test(city.value) == false){
+	if(isNaN(date)){
+		error += 1
+		document.getElementById("birthtitle").innerText = birth.title
+	}
+	else{
+		error = 0
+		document.getElementById("birthtitle").innerText = "" 
+	}
+	if(/[A-Z]{2}\/\D{3}/.test(city.value) == false || city.value == undefined){
 		error += 1
 		document.getElementById("citytitle").innerText = city.title;
 	}
@@ -56,7 +65,7 @@ form.addEventListener("submit", function(stop){
 		document.getElementById("citytitle").innerText = ""
 	}
 
-	if(/[^0-9][a-z][^0-9]/ig.test(college.value) == false){
+	if(/[^0-9][a-z][^0-9]/ig.test(college.value) == false || college.value == undefined){
 		error += 1;
 		document.getElementById("collegetitle").innerText = college.title;
 	}
