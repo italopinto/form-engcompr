@@ -13,6 +13,7 @@ Formulário desenvolvido como plataforma de cadastro para o Curso EngComper
 * HTML5
 * CSS3
 * JavaScript
+* Node.js
 
 ## Layout Disponível em:
 [Figma](https://www.figma.com/file/gVEyV4TBCADOFviKZv5OEs/Formul%C3%A1rio-ENGCOMPER?node-id=0%3A1)
@@ -20,4 +21,6 @@ Formulário desenvolvido como plataforma de cadastro para o Curso EngComper
 ## BackLog
 - [x] Criação do Readme
 - [ ] Melhoria do Readme
+- [ ] Documentar a API 
+- [ ] Documentar os passos necessários ao funcionamento com o Google Spreadsheets
 
