@@ -23,7 +23,7 @@ console.log(city.value)
 form.addEventListener("submit", function(stop){
 	stop.preventDefault();
 	let error = 0;
-	if(/[^0-9][a-z][^0-9]/ig.test(nome.value) == false || nome.value == undefined){
+	if(/[^0-9][a-z][^0-9]/ig.test(nome.value) == false || nome.value === undefined){
 		error += 1;
 		document.getElementById("nametitle").innerText = nome.title;
 	}
@@ -32,7 +32,7 @@ form.addEventListener("submit", function(stop){
 		document.getElementById("nametitle").innerText = '';
 	}
 
-	if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone.value) == false || phone.value == undefined){
+	if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone.value) == false || phone.value === undefined){
 		error += 1;
 		document.getElementById("phonetitle").innerText = phone.title
 	}
@@ -40,7 +40,7 @@ form.addEventListener("submit", function(stop){
 		error = 0;
 		document.getElementById("phonetitle").innerText = ""
 	}
-	if(/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+).([a-z])?$/.test(email.value) == false || email.value == undefined){
+	if(/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+).([a-z])?$/.test(email.value) == false || email.value === undefined){
 		error += 1
 		document.getElementById("emailtitle").innerText = email.title;
 	}
@@ -48,7 +48,7 @@ form.addEventListener("submit", function(stop){
 		error = 0;
 		document.getElementById("emailtitle").innerText = ""
 	}
-	if(isNaN(date)){
+	if(isNaN(date) || birth.value === undefined){
 		error += 1
 		document.getElementById("birthtitle").innerText = birth.title
 	}
@@ -56,7 +56,7 @@ form.addEventListener("submit", function(stop){
 		error = 0
 		document.getElementById("birthtitle").innerText = "" 
 	}
-	if(/[A-Z]{2}\/\D{3}/.test(city.value) == false || city.value == undefined){
+	if(/[A-Z]{2}\/\D{3}/.test(city.value) == false || city.value === undefined){
 		error += 1
 		document.getElementById("citytitle").innerText = city.title;
 	}
@@ -65,7 +65,7 @@ form.addEventListener("submit", function(stop){
 		document.getElementById("citytitle").innerText = ""
 	}
 
-	if(/[^0-9][a-z][^0-9]/ig.test(college.value) == false || college.value == undefined){
+	if(/[^0-9][a-z][^0-9]/ig.test(college.value) == false || college.value === undefined){
 		error += 1;
 		document.getElementById("collegetitle").innerText = college.title;
 	}
